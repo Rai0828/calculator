@@ -33,16 +33,15 @@ Partial Class Form1
         BTN8 = New Button()
         BTN9 = New Button()
         BTN0 = New Button()
-        Button11 = New Button()
-        Button12 = New Button()
-        Button13 = New Button()
-        Button14 = New Button()
+        BTN_ADD = New Button()
+        BTN_SUB = New Button()
+        BTN_MULTIPLY = New Button()
+        BTN_DEVIDE = New Button()
         BTN_DECIMAL = New Button()
-        Button16 = New Button()
-        Button17 = New Button()
-        Button18 = New Button()
+        BTN_EQUAL = New Button()
+        BTN_CANCEL = New Button()
+        BTN_CLEAR = New Button()
         Label2 = New Label()
-        Label1 = New Label()
         SuspendLayout()
         ' 
         ' TXTBOX_DIGITSCREEN
@@ -177,53 +176,53 @@ Partial Class Form1
         BTN0.Text = "0"
         BTN0.UseVisualStyleBackColor = False
         ' 
-        ' Button11
+        ' BTN_ADD
         ' 
-        Button11.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
-        Button11.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button11.ForeColor = Color.FloralWhite
-        Button11.Location = New Point(207, 198)
-        Button11.Name = "Button11"
-        Button11.Size = New Size(51, 38)
-        Button11.TabIndex = 11
-        Button11.Text = "+"
-        Button11.UseVisualStyleBackColor = False
+        BTN_ADD.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
+        BTN_ADD.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BTN_ADD.ForeColor = Color.FloralWhite
+        BTN_ADD.Location = New Point(207, 198)
+        BTN_ADD.Name = "BTN_ADD"
+        BTN_ADD.Size = New Size(51, 38)
+        BTN_ADD.TabIndex = 11
+        BTN_ADD.Text = "+"
+        BTN_ADD.UseVisualStyleBackColor = False
         ' 
-        ' Button12
+        ' BTN_SUB
         ' 
-        Button12.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
-        Button12.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button12.ForeColor = Color.FloralWhite
-        Button12.Location = New Point(207, 246)
-        Button12.Name = "Button12"
-        Button12.Size = New Size(51, 38)
-        Button12.TabIndex = 12
-        Button12.Text = "-"
-        Button12.UseVisualStyleBackColor = False
+        BTN_SUB.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
+        BTN_SUB.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BTN_SUB.ForeColor = Color.FloralWhite
+        BTN_SUB.Location = New Point(207, 246)
+        BTN_SUB.Name = "BTN_SUB"
+        BTN_SUB.Size = New Size(51, 38)
+        BTN_SUB.TabIndex = 12
+        BTN_SUB.Text = "-"
+        BTN_SUB.UseVisualStyleBackColor = False
         ' 
-        ' Button13
+        ' BTN_MULTIPLY
         ' 
-        Button13.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
-        Button13.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button13.ForeColor = Color.FloralWhite
-        Button13.Location = New Point(207, 299)
-        Button13.Name = "Button13"
-        Button13.Size = New Size(51, 38)
-        Button13.TabIndex = 13
-        Button13.Text = "*"
-        Button13.UseVisualStyleBackColor = False
+        BTN_MULTIPLY.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
+        BTN_MULTIPLY.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BTN_MULTIPLY.ForeColor = Color.FloralWhite
+        BTN_MULTIPLY.Location = New Point(207, 299)
+        BTN_MULTIPLY.Name = "BTN_MULTIPLY"
+        BTN_MULTIPLY.Size = New Size(51, 38)
+        BTN_MULTIPLY.TabIndex = 13
+        BTN_MULTIPLY.Text = "*"
+        BTN_MULTIPLY.UseVisualStyleBackColor = False
         ' 
-        ' Button14
+        ' BTN_DEVIDE
         ' 
-        Button14.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
-        Button14.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button14.ForeColor = Color.FloralWhite
-        Button14.Location = New Point(207, 349)
-        Button14.Name = "Button14"
-        Button14.Size = New Size(51, 38)
-        Button14.TabIndex = 14
-        Button14.Text = "/"
-        Button14.UseVisualStyleBackColor = False
+        BTN_DEVIDE.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
+        BTN_DEVIDE.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BTN_DEVIDE.ForeColor = Color.FloralWhite
+        BTN_DEVIDE.Location = New Point(207, 349)
+        BTN_DEVIDE.Name = "BTN_DEVIDE"
+        BTN_DEVIDE.Size = New Size(51, 38)
+        BTN_DEVIDE.TabIndex = 14
+        BTN_DEVIDE.Text = "/"
+        BTN_DEVIDE.UseVisualStyleBackColor = False
         ' 
         ' BTN_DECIMAL
         ' 
@@ -237,44 +236,46 @@ Partial Class Form1
         BTN_DECIMAL.Text = "."
         BTN_DECIMAL.UseVisualStyleBackColor = False
         ' 
-        ' Button16
+        ' BTN_EQUAL
         ' 
-        Button16.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
-        Button16.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button16.ForeColor = Color.FloralWhite
-        Button16.Location = New Point(279, 299)
-        Button16.Name = "Button16"
-        Button16.Size = New Size(51, 89)
-        Button16.TabIndex = 16
-        Button16.Text = "="
-        Button16.UseVisualStyleBackColor = False
+        BTN_EQUAL.BackColor = Color.FromArgb(CByte(58), CByte(90), CByte(64))
+        BTN_EQUAL.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BTN_EQUAL.ForeColor = Color.FloralWhite
+        BTN_EQUAL.Location = New Point(279, 299)
+        BTN_EQUAL.Name = "BTN_EQUAL"
+        BTN_EQUAL.Size = New Size(51, 89)
+        BTN_EQUAL.TabIndex = 16
+        BTN_EQUAL.Text = "="
+        BTN_EQUAL.UseVisualStyleBackColor = False
         ' 
-        ' Button17
+        ' BTN_CANCEL
         ' 
-        Button17.BackColor = Color.FromArgb(CByte(27), CByte(58), CByte(26))
-        Button17.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button17.ForeColor = Color.FloralWhite
-        Button17.Location = New Point(279, 198)
-        Button17.Name = "Button17"
-        Button17.Size = New Size(51, 38)
-        Button17.TabIndex = 17
-        Button17.Text = "c"
-        Button17.UseVisualStyleBackColor = False
+        BTN_CANCEL.BackColor = Color.FromArgb(CByte(27), CByte(58), CByte(26))
+        BTN_CANCEL.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BTN_CANCEL.ForeColor = Color.FloralWhite
+        BTN_CANCEL.Location = New Point(279, 198)
+        BTN_CANCEL.Name = "BTN_CANCEL"
+        BTN_CANCEL.Size = New Size(51, 38)
+        BTN_CANCEL.TabIndex = 17
+        BTN_CANCEL.Text = "c"
+        BTN_CANCEL.UseVisualStyleBackColor = False
         ' 
-        ' Button18
+        ' BTN_CLEAR
         ' 
-        Button18.BackColor = Color.FromArgb(CByte(27), CByte(58), CByte(26))
-        Button18.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Button18.ForeColor = Color.FloralWhite
-        Button18.Location = New Point(279, 246)
-        Button18.Name = "Button18"
-        Button18.Size = New Size(51, 38)
-        Button18.TabIndex = 18
-        Button18.Text = "ce"
-        Button18.UseVisualStyleBackColor = False
+        BTN_CLEAR.BackColor = Color.FromArgb(CByte(27), CByte(58), CByte(26))
+        BTN_CLEAR.Font = New Font("SimSun", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        BTN_CLEAR.ForeColor = Color.FloralWhite
+        BTN_CLEAR.Location = New Point(279, 246)
+        BTN_CLEAR.Name = "BTN_CLEAR"
+        BTN_CLEAR.Size = New Size(51, 38)
+        BTN_CLEAR.TabIndex = 18
+        BTN_CLEAR.Text = "ce"
+        BTN_CLEAR.UseVisualStyleBackColor = False
         ' 
         ' Label2
         ' 
+        Label2.Font = New Font("Showcard Gothic", 18F, FontStyle.Bold Or FontStyle.Underline Or FontStyle.Strikeout, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.Black
         Label2.Location = New Point(91, 38)
         Label2.Name = "Label2"
         Label2.Size = New Size(188, 33)
@@ -282,31 +283,21 @@ Partial Class Form1
         Label2.Text = "CALCULATOR"
         Label2.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' Label1
-        ' 
-        Label1.Location = New Point(108, 443)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(188, 10)
-        Label1.TabIndex = 21
-        Label1.Text = "CALCULATOR"
-        Label1.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(108), CByte(124), CByte(89))
         ClientSize = New Size(364, 503)
-        Controls.Add(Label1)
         Controls.Add(Label2)
-        Controls.Add(Button18)
-        Controls.Add(Button17)
-        Controls.Add(Button16)
+        Controls.Add(BTN_CLEAR)
+        Controls.Add(BTN_CANCEL)
+        Controls.Add(BTN_EQUAL)
         Controls.Add(BTN_DECIMAL)
-        Controls.Add(Button14)
-        Controls.Add(Button13)
-        Controls.Add(Button12)
-        Controls.Add(Button11)
+        Controls.Add(BTN_DEVIDE)
+        Controls.Add(BTN_MULTIPLY)
+        Controls.Add(BTN_SUB)
+        Controls.Add(BTN_ADD)
         Controls.Add(BTN0)
         Controls.Add(BTN9)
         Controls.Add(BTN8)
@@ -338,15 +329,14 @@ Partial Class Form1
     Friend WithEvents BTN8 As Button
     Friend WithEvents BTN9 As Button
     Friend WithEvents BTN0 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button14 As Button
+    Friend WithEvents BTN_ADD As Button
+    Friend WithEvents BTN_SUB As Button
+    Friend WithEvents BTN_MULTIPLY As Button
+    Friend WithEvents BTN_DEVIDE As Button
     Friend WithEvents BTN_DECIMAL As Button
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button17 As Button
-    Friend WithEvents Button18 As Button
+    Friend WithEvents BTN_EQUAL As Button
+    Friend WithEvents BTN_CANCEL As Button
+    Friend WithEvents BTN_CLEAR As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
 
 End Class
