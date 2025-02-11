@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Numerics
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form1
     Public num1, num2 As Double
@@ -53,7 +54,14 @@ Public Class Form1
     End Sub
 
     Private Sub BTN_EQUAL_Click(sender As Object, e As EventArgs) Handles BTN_EQUAL.Click
-
+        num2 = TXTBOX_DS.Text
+        If operation = "+" Then
+            Dim total As Single = num1 + num2
+            TXTBOX_DS.Text = total
+        ElseIf operation = "-" Then
+            Dim total As Single = num1 - num2
+            TXTBOX_DS.Text = total
+        End If
     End Sub
 
     Private Sub BTN_DEVIDE_Click(sender As Object, e As EventArgs) Handles BTN_DEVIDE.Click
@@ -65,11 +73,24 @@ Public Class Form1
     End Sub
 
     Private Sub BTN_SUB_Click(sender As Object, e As EventArgs) Handles BTN_SUB.Click
-
+        If TXTBOX_DS.Text = "" OrElse TXTBOX_DS.Text = "-" Then
+            TXTBOX_DS.Text = "-"
+        ElseIf Double.TryParse(TXTBOX_DS.Text, num1) Then ' If not empty AND is a number, it's subtraction
+            operation = "-"
+            num1 = CDbl(TXTBOX_DS.Text) 'Convert to Double here
+            TXTBOX_DS.Clear()
+        Else
+            MessageBox.Show("Invalid input for num1. Please enter a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXTBOX_DS.Clear()
+        End If
     End Sub
 
     Private Sub BTN_ADD_Click(sender As Object, e As EventArgs) Handles BTN_ADD.Click
-        operation = "+"
-        num1 = TXTBOX_DS.Text
+        If Double.TryParse(TXTBOX_DS.Text, num2) Then
+            operation = "+"
+            num1 = TXTBOX_DS.Text
+            TXTBOX_DS.Clear()
+        Else MessageBox.Show("invalid input!!")
+        End If
     End Sub
 End Class
