@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        TXTBOX_DIGITSCREEN = New RichTextBox()
+        TXTBOX_DS = New RichTextBox()
         BTN1 = New Button()
         BTN2 = New Button()
         BTN3 = New Button()
@@ -44,17 +44,17 @@ Partial Class Form1
         Label2 = New Label()
         SuspendLayout()
         ' 
-        ' TXTBOX_DIGITSCREEN
+        ' TXTBOX_DS
         ' 
-        TXTBOX_DIGITSCREEN.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        TXTBOX_DIGITSCREEN.Font = New Font("Showcard Gothic", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        TXTBOX_DIGITSCREEN.Location = New Point(59, 105)
-        TXTBOX_DIGITSCREEN.Name = "TXTBOX_DIGITSCREEN"
-        TXTBOX_DIGITSCREEN.ReadOnly = True
-        TXTBOX_DIGITSCREEN.ScrollBars = RichTextBoxScrollBars.None
-        TXTBOX_DIGITSCREEN.Size = New Size(249, 50)
-        TXTBOX_DIGITSCREEN.TabIndex = 0
-        TXTBOX_DIGITSCREEN.Text = ""
+        TXTBOX_DS.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        TXTBOX_DS.Font = New Font("Showcard Gothic", 26.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TXTBOX_DS.Location = New Point(56, 113)
+        TXTBOX_DS.Name = "TXTBOX_DS"
+        TXTBOX_DS.ReadOnly = True
+        TXTBOX_DS.ScrollBars = RichTextBoxScrollBars.None
+        TXTBOX_DS.Size = New Size(249, 50)
+        TXTBOX_DS.TabIndex = 0
+        TXTBOX_DS.Text = ""
         ' 
         ' BTN1
         ' 
@@ -276,7 +276,7 @@ Partial Class Form1
         ' 
         Label2.Font = New Font("Showcard Gothic", 18F, FontStyle.Bold Or FontStyle.Underline Or FontStyle.Strikeout, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Black
-        Label2.Location = New Point(91, 38)
+        Label2.Location = New Point(81, 44)
         Label2.Name = "Label2"
         Label2.Size = New Size(188, 33)
         Label2.TabIndex = 20
@@ -308,7 +308,7 @@ Partial Class Form1
         Controls.Add(BTN3)
         Controls.Add(BTN2)
         Controls.Add(BTN1)
-        Controls.Add(TXTBOX_DIGITSCREEN)
+        Controls.Add(TXTBOX_DS)
         ForeColor = Color.DimGray
         MaximumSize = New Size(380, 542)
         MinimumSize = New Size(380, 542)
@@ -318,7 +318,7 @@ Partial Class Form1
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents TXTBOX_DIGITSCREEN As RichTextBox
+    Friend WithEvents TXTBOX_DS As RichTextBox
     Friend WithEvents BTN1 As Button
     Friend WithEvents BTN2 As Button
     Friend WithEvents BTN3 As Button
