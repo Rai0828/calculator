@@ -61,15 +61,34 @@ Public Class Form1
         ElseIf operation = "-" Then
             Dim total As Single = num1 - num2
             TXTBOX_DS.Text = total
+        ElseIf operation = "*" Then
+            Dim total As Single = num1 * num2
+            TXTBOX_DS.Text = total
+        ElseIf operation = "/" Then
+            Dim total As Single = num1 / num2
+            TXTBOX_DS.Text = total
+
         End If
     End Sub
 
     Private Sub BTN_DEVIDE_Click(sender As Object, e As EventArgs) Handles BTN_DEVIDE.Click
-
+        If Double.TryParse(TXTBOX_DS.Text, num1) Then
+            operation = "/"
+            TXTBOX_DS.Clear()
+        Else
+            MessageBox.Show("Invalid input. Please enter a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXTBOX_DS.Clear()
+        End If
     End Sub
 
     Private Sub BTN_MULTIPLY_Click(sender As Object, e As EventArgs) Handles BTN_MULTIPLY.Click
-
+        If Double.TryParse(TXTBOX_DS.Text, num1) Then
+            operation = "*"
+            TXTBOX_DS.Clear()
+        Else
+            MessageBox.Show("Invalid input . Please enter a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXTBOX_DS.Clear()
+        End If
     End Sub
 
     Private Sub BTN_SUB_Click(sender As Object, e As EventArgs) Handles BTN_SUB.Click
@@ -80,17 +99,31 @@ Public Class Form1
             num1 = CDbl(TXTBOX_DS.Text) 'Convert to Double here
             TXTBOX_DS.Clear()
         Else
-            MessageBox.Show("Invalid input for num1. Please enter a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Invalid input . Please enter a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             TXTBOX_DS.Clear()
         End If
     End Sub
 
     Private Sub BTN_ADD_Click(sender As Object, e As EventArgs) Handles BTN_ADD.Click
-        If Double.TryParse(TXTBOX_DS.Text, num2) Then
+        If TXTBOX_DS.Text = "" OrElse TXTBOX_DS.Text = "+" Then
+            TXTBOX_DS.Text = "+"
+        ElseIf Double.TryParse(TXTBOX_DS.Text, num1) Then ' If not empty AND is a number, it's subtraction
             operation = "+"
-            num1 = TXTBOX_DS.Text
+            num1 = CDbl(TXTBOX_DS.Text) 'Convert to Double here
             TXTBOX_DS.Clear()
-        Else MessageBox.Show("invalid input!!")
+        Else
+            MessageBox.Show("Invalid input for num1. Please enter a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            TXTBOX_DS.Clear()
         End If
+    End Sub
+
+    Private Sub BTN_CANCEL_Click(sender As Object, e As EventArgs) Handles BTN_CANCEL.Click
+        If TXTBOX_DS.Text.Length > 0 Then
+            TXTBOX_DS.Text = TXTBOX_DS.Text.Substring(0, TXTBOX_DS.Text.Length - 1)
+        End If
+    End Sub
+
+    Private Sub BTN_CLEAR_Click(sender As Object, e As EventArgs) Handles BTN_CLEAR.Click
+        TXTBOX_DS.Text = ""
     End Sub
 End Class
